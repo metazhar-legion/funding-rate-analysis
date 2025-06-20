@@ -1,0 +1,176 @@
+/* Dashboard Styles */
+
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+.header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.header p {
+    margin: 5px 0 0;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+/* Filter styles */
+.filters-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-item {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #555;
+}
+
+#apply-filters {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    align-self: flex-end;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+}
+
+#apply-filters:hover {
+    background-color: #2980b9;
+}
+
+/* Main content styles */
+.main-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Tab styles */
+.tab {
+    padding: 15px 0;
+}
+
+/* Chart container */
+.chart-container {
+    min-height: 500px;
+    padding: 10px 0;
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    padding: 15px;
+    color: #777;
+    font-size: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .filters-container {
+        flex-direction: column;
+    }
+    
+    .filter-item {
+        width: 100%;
+    }
+}
+
+/* Custom Plotly adjustments */
+.js-plotly-plot .plotly .modebar {
+    top: 10px;
+    right: 10px;
+}
+
+/* Statistics table styling */
+.statistics-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.statistics-table th,
+.statistics-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.statistics-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #555;
+}
+
+.statistics-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Loading indicator */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.loading:after {
+    content: " ";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 6px solid #3498db;
+    border-color: #3498db transparent #3498db transparent;
+    animation: loading 1.2s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
